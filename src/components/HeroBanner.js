@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 import HeroBannerImage from '../assets/images/banner.png';
 
@@ -16,7 +17,7 @@ const HeroBanner = () => (
     <Typography fontSize="22px" fontFamily="Alegreya" lineHeight="35px">
       Check out the most effective exercises personalized to you
     </Typography>
-    <Stack>
+    <Stack style={{ flexDirection:'row'}}>
       <ScrollLink
         to="exercises"
         smooth={true}
@@ -37,6 +38,27 @@ const HeroBanner = () => (
       >
         Explore Exercises
       </ScrollLink>
+      <Link
+        to="/membership"
+        smooth={true}
+        duration={500}
+        style={{
+          marginTop: '45px',
+          textDecoration: 'none',
+          width: '250px',
+          textAlign: 'center',
+          background: '#FF2625',
+          padding: '14px',
+          fontSize: '22px',
+          textTransform: 'none',
+          color: 'white',
+          borderRadius: '4px',
+          cursor: 'pointer',
+          marginLeft: '5%'
+        }}
+      >
+        Explore Membership
+      </Link>
     </Stack>
     <Typography
       fontWeight={600}
